@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -68,9 +69,9 @@ class _LoginPageState extends State<LoginPage> {
                           onPressed: () {
                             // Validate will return true if the form is valid, or false if
                             // the form is invalid.
-                            if (_formKey.currentState!.validate()) {
-                              // Process data.
-                            }
+                            // if (_formKey.currentState!.validate()) {
+                            // Process data.
+                            context.go('/home');
                           },
                           child: const Text('Подтвердить'),
                         ),
